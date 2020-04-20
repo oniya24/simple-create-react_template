@@ -1,0 +1,20 @@
+{
+  "name": "sample-create-react_template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oniya24/sample-create-react_template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oniya24/sample-create-react_template/issues"
+  },
+  "homepage": "https://github.com/oniya24/sample-create-react_template#readme"
+}
