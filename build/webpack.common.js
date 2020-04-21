@@ -6,7 +6,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
     entry:{
-        main: path.resolve(SRC_PATH,'main.js')
+        main: path.resolve(SRC_PATH,'App.js')
     },
     optimization:{
         usedExports: true,
@@ -14,6 +14,16 @@ module.exports = {
     },
     module:{
         rules:[
+            {
+                test: /\.(png|jpg|gif|svg)$/,
+                use:{
+                    loader:'url-loader',
+                    options:{
+                        llimit: 2048,
+                        filename:'[name].[ext]'
+                    }
+                }
+            },
             {
                 test: /\.(js|jsx)$/,
                 use:{

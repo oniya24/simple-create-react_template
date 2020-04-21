@@ -2,10 +2,13 @@ import React,{ useState } from 'react';
 import { Input } from 'antd';
 
 function WelcomeToReact(props){
-    const [ value, setValue ] = useState("");
+    console.log(props);
+    const onValueChange = (e)=>{
+        props.changeText(e.target.value);
+    }
     return(
-        <div>
-            <Input placeholder="please Input" value={value} onChange={(e)=>{ setValue(e.target.value) }}></Input>
+        <div className="WelcomeToReact">
+            <Input maxLength={30} placeholder="please Input" value={props.text} onChange={(e)=>onValueChange(e)}></Input>
         </div>
     )
 }

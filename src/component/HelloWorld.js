@@ -1,15 +1,10 @@
-import React, { Component } from 'react';
-class HelloWorld extends Component{
-    constructor(props){
-        super(props);
-    }
-    render(){
-        return(
-            <div>
-                { this.props.children }
-            </div>
-        )
-    }
+import React from 'react';
+function HelloWorld(props){
+    return(
+        <div className="HelloWorld">
+                <p>{props.text}</p>
+        </div>
+    )
 }
 
 export default HelloWorld;

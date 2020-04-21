@@ -1,4 +1,4 @@
-$bg-color: rgba(200,200,200,0.5);
+$bg-color: #20232a;
 html,body{
     padding: 0;
     margin: 0;
@@ -7,4 +7,24 @@ html,body{
     width: 100vw;
     height: 100vh;
     background-color: #{$bg-color};
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .WelcomeToReact{
+        width: 30vw;
+        height: 10vh;
+    }
+    .HelloWorld{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30vw;
+        height: 10vh;
+        p{
+            width: 50%;
+            text-align: center;
+            text-overflow: ellipsis;
+        }
+    }
 }

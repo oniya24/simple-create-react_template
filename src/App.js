@@ -1,16 +1,33 @@
 import React, { Component, Fragment } from 'react';
+import ReactDOM from 'react-dom';
 import HelloWorld from './component/HelloWorld';
 import WelcomeToReact from './component/WelcomeToReact';
+import pika from './assets/pika.jpg';
+import './main.scss';
+
 
 class App extends Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            mainText:"HelloWorld"
+        }
+
+    }
+    freshMainText(value){
+        this.setState({
+            mainText:value
+        })
+    }
     render(){
         return(
             <Fragment>
-                <HelloWorld>HelloWorld</HelloWorld>
-                <WelcomeToReact></WelcomeToReact>
+                <img src={ pika }></img>
+                <HelloWorld text={this.state.mainText}></HelloWorld>
+                <WelcomeToReact text={this.state.mainText} changeText={this.freshMainText.bind(this)}></WelcomeToReact>
             </Fragment>
         )
     }
 }
 
-export default App;
+ReactDOM.render( <App />, document.getElementById('root') );
