@@ -1,12 +1,12 @@
 {
   "name": "{{name}}",
-  "version": "1.0.0",
+  "version": "{{version}}",
   "sideEffects": [
     "*.css",
     "*.scss"
   ],
   "description": "{{ description }}",
-  "main": "index.js",
+  "main": "src/App.js",
   "scripts": {
     "build": "webpack --config build/webpack.prod.js",
     "dev": "webpack-dev-server --config build/webpack.dev.js"
