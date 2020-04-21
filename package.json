@@ -1,5 +1,5 @@
 {
-  "name": "{{ name }}",
+  "name": "{{name}}",
   "version": "1.0.0",
   "sideEffects": [
     "*.css",
@@ -8,20 +8,20 @@
   "description": "{{ description }}",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config build/webpack.prod.js",
     "dev": "webpack-dev-server --config build/webpack.dev.js"
   },
-
   "keywords": [],
   "author": "{{ author }}",
   "license": "ISC",
-
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/plugin-transform-runtime": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
     "@babel/preset-react": "^7.9.4",
+    {{#if isAxios}}
+    "axios": "^0.19.2",
+    {{/if}}
     "babel-loader": "^8.1.0",
     "babel-preset-mobx": "^2.0.0",
     "clean-webpack-plugin": "^3.0.0",
@@ -29,6 +29,15 @@
     "html-webpack-plugin": "^4.2.0",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.1",
+    {{#if isReactRedux}}
+    "react-redux": "^7.2.0",
+    {{/if}}
+    {{#if isReactRouterDom}}
+    "react-router-dom": "^5.1.2",
+    {{/if}}
+    {{#if isRedux}}
+    "redux": "^4.0.5",
+    {{/if}}
     "sass-loader": "^8.0.2",
     "style-loader": "^1.1.4",
     "uglifyjs-webpack-plugin": "^2.2.0",
@@ -41,7 +50,6 @@
     "antd": "^4.1.4",
     "babel-plugin-import": "^1.13.0",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-router": "^5.1.2"
+    "react-dom": "^16.13.1"
   }
 }
