@@ -42,4 +42,10 @@ module.exports = {
             filename: 'index.html'
         })
     ],
+    resolve:{
+        extensions:['.js','.jsx'],
+        alias:{
+            $: path.resolve(SRC_PATH,'component')
+        }
+    }
 }

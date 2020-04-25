@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import ReactDOM from 'react-dom';
-import HelloWorld from './component/HelloWorld';
-import WelcomeToReact from './component/WelcomeToReact';
+import HelloWorld from '$/HelloWorld';
+import WelcomeToReact from '$/WelcomeToReact';
 import pika from './assets/pika.jpg';
 import './main.scss';
 

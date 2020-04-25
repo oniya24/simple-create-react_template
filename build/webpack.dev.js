@@ -10,7 +10,8 @@ module.exports = merge(baseConfig,{
         open: true,
         hot: true,
         compress: true,
-        port: 4000
+        port: 4000,
+        historyApiFallback: true
     },
     plugins:[
         new webpack.HotModuleReplacementPlugin()
